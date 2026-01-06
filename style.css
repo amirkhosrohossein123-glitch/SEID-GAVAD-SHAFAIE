@@ -1,79 +1,39 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Tahoma', sans-serif;
-  background: linear-gradient(135deg, #065f46, #10b981);
-  color: #333;
-  line-height: 1.7;
-  direction: rtl;
-  min-height: 100vh;
+    font-family: 'Tahoma', sans-serif;
+    direction: rtl;
 }
 
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  background: white;
-  padding: 40px;
-  border-radius: 15px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
+.progress {
+    border-radius: 15px;
+    overflow: hidden;
 }
 
-/* بخش آمار بالای سایت (دایره‌های درصد) */
-.stats-header {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 50px;
-  padding: 30px;
-  background: linear-gradient(135deg, #d1fae5, #a7f3d0);
-  border-radius: 15px;
-  text-align: center;
+.progress-bar {
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 15px;
 }
 
-.stat-item {
-  flex: 1;
-  min-width: 150px;
+.card {
+    transition: transform 0.3s;
 }
 
-.stat-circle {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  background: conic-gradient(#10b981 0% 85%, #e0e0e0 85% 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 15px;
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #065f46;
+.card:hover {
+    transform: translateY(-10px);
 }
 
-.stat-label {
-  font-size: 1.1rem;
-  color: #064e3b;
+.navbar {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* عنوان بخش‌ها */
-h2 {
-  color: #10b981;
-  margin-bottom: 15px;
-  font-size: 1.7rem;
-  border-right: 5px solid #10b981;
-  padding-right: 12px;
-  display: inline-block;
+.carousel-item {
+    height: 70vh;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* لیست مهارت‌ها */
-ul {
-  list-style: none;
+section {
+    scroll-margin-top: 80px; /* برای اسکرول نرم با navbar fixed */
 }
-
-ul li {
-  background:
