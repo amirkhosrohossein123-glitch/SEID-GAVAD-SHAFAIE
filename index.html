@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>پورتفولیو سید محمد جواد شفاعی</title>
+    <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
@@ -11,9 +12,9 @@
 <body class="bg-light">
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top shadow-lg">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">سید محمد جواد شفاعی</a>
+            <a class="navbar-brand fw-bold fs-4" href="#">سید محمد جواد شفاعی</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -29,48 +30,161 @@
         </div>
     </nav>
 
-    <!-- Carousel با ارتفاع کمتر و متن بهتر دیده شدن -->
-    <div id="home" class="carousel slide mt-5" data-bs-ride="carousel">
+    <!-- Carousel اصلاح شده -->
+    <div id="home" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
         <div class="carousel-inner">
+            <!-- اسلاید 1: معرفی شخصی -->
             <div class="carousel-item active">
-                <div class="d-flex align-items-center justify-content-center text-white text-center min-vh-50 bg-success">
-                    <div>
-                        <h1 class="display-3 fw-bold text-shadow">سید محمد جواد شفاعی</h1>
+                <div class="d-flex align-items-center justify-content-center text-white text-center min-vh-50 carousel-bg-1">
+                    <div class="p-4">
+                        <h1 class="display-2 fw-bold text-shadow">سید محمد جواد شفاعی</h1>
                         <p class="lead fs-3 text-shadow">توسعه‌دهنده فرانت‌اند</p>
-                        <p class="fs-4 text-shadow">دانشجوی مهندسی کامپیوتر | علاقه‌مند به وب و هوش مصنوعی</p>
+                        <p class="fs-4 text-shadow">دانشجوی مهندسی کامپیوتر | علاقه‌مند به وب، React و هوش مصنوعی</p>
                     </div>
                 </div>
             </div>
+
+            <!-- اسلاید 2: مهارت‌ها -->
             <div class="carousel-item">
-                <div class="d-flex align-items-center justify-content-center text-white text-center min-vh-50 bg-primary">
-                    <div>
-                        <h2 class="display-5 fw-bold text-shadow">مهارت‌های کلیدی</h2>
-                        <p class="fs-4 text-shadow">HTML/CSS, JavaScript, React, Python, Machine Learning</p>
+                <div class="d-flex align-items-center justify-content-center text-white text-center min-vh-50 carousel-bg-2">
+                    <div class="p-4">
+                        <h2 class="display-4 fw-bold text-shadow">مهارت‌های کلیدی</h2>
+                        <p class="fs-3 text-shadow">HTML/CSS • JavaScript • React.js • Python • Machine Learning</p>
                     </div>
                 </div>
             </div>
+
+            <!-- اسلاید 3: پروژه‌ها -->
             <div class="carousel-item">
-                <div class="d-flex align-items-center justify-content-center text-white text-center min-vh-50 bg-danger">
-                    <div>
-                        <h2 class="display-5 fw-bold text-shadow">پروژه‌های من</h2>
-                        <p class="fs-4 text-shadow">تشخیص تصویر با CNN • رزومه تعاملی • تحلیل داده</p>
+                <div class="d-flex align-items-center justify-content-center text-white text-center min-vh-50 carousel-bg-3">
+                    <div class="p-4">
+                        <h2 class="display-4 fw-bold text-shadow">پروژه‌های برجسته</h2>
+                        <p class="fs-3 text-shadow">تشخیص تصویر با CNN • رزومه تعاملی با Bootstrap • تحلیل داده با Pandas</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- کنترل‌های carousel -->
         <button class="carousel-control-prev" type="button" data-bs-target="#home" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">قبلی</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#home" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">بعدی</span>
         </button>
     </div>
 
-    <!-- بقیه بخش‌ها (مهارت‌ها، پروژه‌ها و ...) همون قبلی بمونه -->
+    <!-- بقیه محتوا (مهارت‌ها، پروژه‌ها و ...) -->
     <div class="container my-5">
-        <!-- Progress Bars و Cardها و بقیه بخش‌ها رو از کد قبلی کپی کن -->
-        <!-- (برای اختصار اینجا نذاشتم، اما همون قبلی عالیه) -->
+        <!-- بخش مهارت‌ها با Progress Bar -->
+        <section id="skills" class="my-5">
+            <h2 class="text-center mb-5 text-success fw-bold display-6">مهارت‌های فنی</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="mb-4"><div class="d-flex justify-content-between"><span>HTML5 & CSS3</span><span>90%</span></div>
+                        <div class="progress rounded-pill" style="height: 30px;"><div class="progress-bar bg-danger" style="width: 90%">90%</div></div>
+                    </div>
+                    <div class="mb-4"><div class="d-flex justify-content-between"><span>JavaScript (ES6+)</span><span>85%</span></div>
+                        <div class="progress rounded-pill" style="height: 30px;"><div class="progress-bar bg-success" style="width: 85%">85%</div></div>
+                    </div>
+                    <div class="mb-4"><div class="d-flex justify-content-between"><span>React.js</span><span>80%</span></div>
+                        <div class="progress rounded-pill" style="height: 30px;"><div class="progress-bar bg-info" style="width: 80%">80%</div></div>
+                    </div>
+                    <div class="mb-4"><div class="d-flex justify-content-between"><span>Python & Machine Learning</span><span>75%</span></div>
+                        <div class="progress rounded-pill" style="height: 30px;"><div class="progress-bar bg-warning text-dark" style="width: 75%">75%</div></div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="mb-4"><div class="d-flex justify-content-between"><span>Git & GitHub</span><span>85%</span></div>
+                        <div class="progress rounded-pill" style="height: 30px;"><div class="progress-bar bg-dark" style="width: 85%">85%</div></div>
+                    </div>
+                    <div class="mb-4"><div class="d-flex justify-content-between"><span>Bootstrap / Tailwind</span><span>80%</span></div>
+                        <div class="progress rounded-pill" style="height: 30px;"><div class="progress-bar bg-primary" style="width: 80%">80%</div></div>
+                    </div>
+                    <div class="mb-4"><div class="d-flex justify-content-between"><span>TensorFlow / PyTorch</span><span>70%</span></div>
+                        <div class="progress rounded-pill" style="height: 30px;"><div class="progress-bar bg-secondary" style="width: 70%">70%</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- پروژه‌ها با Card و Modal -->
+        <section id="projects" class="my-5">
+            <h2 class="text-center mb-5 text-success fw-bold display-6">پروژه‌های دانشگاهی</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-lg border-0">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-camera-fill display-1 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">تشخیص تصویر با CNN</h5>
+                            <p class="card-text">مدل شبکه کانولوشنی برای طبقه‌بندی تصاویر با دقت بالا.</p>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal1">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-lg border-0">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-file-code-fill display-1 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">وب‌سایت رزومه</h5>
+                            <p class="card-text">رزومه تعاملی با Bootstrap و HTML/CSS (همین سایت!)</p>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal2">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-lg border-0">
+                        <div class="card-body text-center p-4">
+                            <i class="bi bi-graph-up-arrow display-1 text-success mb-3"></i>
+                            <h5 class="card-title fw-bold">تحلیل داده با Pandas</h5>
+                            <p class="card-text">پردازش و مصورسازی داده با Python و Matplotlib.</p>
+                            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal3">جزئیات بیشتر</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- تحصیلات و تماس (همون قبلی) -->
+        <section id="education" class="my-5">
+            <h2 class="text-center mb-4 text-success fw-bold display-6">تحصیلات</h2>
+            <div class="card shadow-lg border-0">
+                <div class="card-body text-center">
+                    <h5>کارشناسی مهندسی کامپیوتر</h5>
+                    <p>دانشگاه براجین قزوین<br>سال ورود: ۱۴۰۲ | معدل فعلی: ۲۰</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="my-5 text-center">
+            <h2 class="mb-4 text-success fw-bold display-6">تماس با من</h2>
+            <p class="fs-5">ایمیل: example@email.com</p>
+            <p class="fs-5">تلفن: ۰۹۱۲۳۴۵۶۷۸۹</p>
+            <div class="mt-4">
+                <a href="#" class="btn btn-outline-success btn-lg mx-2"><i class="bi bi-github fs-3"></i></a>
+                <a href="#" class="btn btn-outline-success btn-lg mx-2"><i class="bi bi-linkedin fs-3"></i></a>
+            </div>
+        </section>
     </div>
+
+    <!-- Modal ها -->
+    <div class="modal fade" id="modal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">تشخیص تصویر با CNN</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>پروژه دانشگاهی با TensorFlow/Keras. مدل CNN روی دیتاست سفارشی آموزش دیده و دقت ۹۲٪ کسب کرده است.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal2 و modal3 هم مشابه بساز -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
