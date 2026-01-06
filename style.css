@@ -3,37 +3,50 @@ body {
     direction: rtl;
 }
 
+/* سایه قوی برای متن روی carousel */
+.text-shadow {
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+/* ارتفاع مناسب carousel */
+.min-vh-50 {
+    min-height: 50vh;
+}
+
+/* بک‌گراندهای carousel */
+.carousel-bg-1 { background: linear-gradient(135deg, #065f46, #10b981); }
+.carousel-bg-2 { background: linear-gradient(135deg, #1e40af, #3b82f6); }
+.carousel-bg-3 { background: linear-gradient(135deg, #991b1b, #dc2626); }
+
+/* Progress Bar زیبا */
 .progress {
-    border-radius: 15px;
+    border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .progress-bar {
     font-weight: bold;
-    font-size: 1rem;
-    border-radius: 15px;
+    font-size: 1.1rem;
+    border-radius: 20px;
 }
 
+/* Card hover */
 .card {
-    transition: transform 0.3s;
+    transition: all 0.4s ease;
+    border: none !important;
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2) !important;
 }
 
-.navbar {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.carousel-item {
-    height: 70vh;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* اسکرول نرم برای لینک‌های navbar */
+html {
+    scroll-behavior: smooth;
 }
 
 section {
-    scroll-margin-top: 80px; /* برای اسکرول نرم با navbar fixed */
+    scroll-margin-top: 90px;
 }
